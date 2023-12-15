@@ -27,7 +27,7 @@
     "@types/jest": "^27.0.2"
   },
   "dependencies": {
-    "@lido-sdk/constants": "jiaqi-ienyan/lynx-constants#main"
+    "@lynx-sdk/constants": "jiaqi-ienyan/lynx-constants#main"
   },
   "peerDependencies": {
     "@ethersproject/logger": "5",
