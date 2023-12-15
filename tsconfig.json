@@ -12,7 +12,8 @@
     "moduleResolution": "node",
     "module": "esnext",
     "jsx": "react-jsx",
-    "target": "es6"
+    "target": "es6",
+    "outDir": "dist"
   },
   "include": ["**/src/**/*"],
   "exclude": ["node_modules"]

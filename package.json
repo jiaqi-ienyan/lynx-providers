@@ -1,9 +1,9 @@
 {
   "name": "@lynx-sdk/providers",
   "version": "0.0.0-semantic-release",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "homepage": "https://github.com/jiaqi-ienyan/lynx-providers",
   "repository": {
@@ -24,10 +24,12 @@
     "@ethersproject/networks": "^5.4.0",
     "@ethersproject/properties": "^5.4.0",
     "@ethersproject/providers": "^5.4.5",
-    "@types/jest": "^27.0.2"
+    "@types/jest": "^27.0.2",
+    "@types/node": "^20.10.4"
   },
   "dependencies": {
-    "@lynx-sdk/constants": "jiaqi-ienyan/lynx-constants#main"
+    "@lynx-sdk/constants": "jiaqi-ienyan/lynx-constants#main",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "@ethersproject/logger": "5",
