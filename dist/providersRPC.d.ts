@@ -1,4 +1,4 @@
-import { CHAINS } from '@lynx-sdk/constants';
+import { CHAINS } from '@lido-sdk/constants';
 import { JsonRpcProvider, JsonRpcBatchProvider, StaticJsonRpcProvider } from '@ethersproject/providers';
 import { StaticJsonRpcBatchProvider } from './staticJsonRpcBatchProvider';
 export declare const getRpcProvider: (chainId: CHAINS, url: string, cacheSeed?: number, pollingInterval?: number | null) => JsonRpcProvider;
