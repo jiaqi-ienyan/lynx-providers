@@ -215,9 +215,9 @@
     "@ethersproject/properties" "^5.7.0"
     "@ethersproject/strings" "^5.7.0"
 
-"@lynx-sdk/constants@jiaqi-ienyan/lynx-constants#main":
+"@lynx-sdk/constants@git+https://github.com/jiaqi-ienyan/lynx-constants.git":
   version "0.0.0-semantic-release"
-  resolved "https://codeload.github.com/jiaqi-ienyan/lynx-constants/tar.gz/6df1f7e7c1e811eb9af650afcd883e53f33abce2"
+  resolved "git+https://github.com/jiaqi-ienyan/lynx-constants.git#6df1f7e7c1e811eb9af650afcd883e53f33abce2"
   dependencies:
     tiny-invariant "^1.1.0"
     typescript "^5.3.3"
