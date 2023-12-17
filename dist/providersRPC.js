@@ -1,10 +1,15 @@
-import { JsonRpcProvider, JsonRpcBatchProvider, StaticJsonRpcProvider } from '@ethersproject/providers';
-import { StaticJsonRpcBatchProvider } from './staticJsonRpcBatchProvider';
-const createProviderGetter = (Provider) => {
-    const cache = new Map();
-    return (chainId, url, cacheSeed = 0, pollingInterval = null) => {
-        const cacheKey = `${chainId}-${cacheSeed}-${url}`;
-        let provider = cache.get(cacheKey);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getStaticRpcBatchProvider = exports.getStaticRpcProvider = exports.getRpcBatchProvider = exports.getRpcProvider = void 0;
+var providers_1 = require("@ethersproject/providers");
+var staticJsonRpcBatchProvider_1 = require("./staticJsonRpcBatchProvider");
+var createProviderGetter = function (Provider) {
+    var cache = new Map();
+    return function (chainId, url, cacheSeed, pollingInterval) {
+        if (cacheSeed === void 0) { cacheSeed = 0; }
+        if (pollingInterval === void 0) { pollingInterval = null; }
+        var cacheKey = "".concat(chainId, "-").concat(cacheSeed, "-").concat(url);
+        var provider = cache.get(cacheKey);
         if (!provider) {
             provider = new Provider(url, chainId);
             cache.set(cacheKey, provider);
@@ -15,7 +20,7 @@ const createProviderGetter = (Provider) => {
         return provider;
     };
 };
-export const getRpcProvider = createProviderGetter(JsonRpcProvider);
-export const getRpcBatchProvider = createProviderGetter(JsonRpcBatchProvider);
-export const getStaticRpcProvider = createProviderGetter(StaticJsonRpcProvider);
-export const getStaticRpcBatchProvider = createProviderGetter(StaticJsonRpcBatchProvider);
+exports.getRpcProvider = createProviderGetter(providers_1.JsonRpcProvider);
+exports.getRpcBatchProvider = createProviderGetter(providers_1.JsonRpcBatchProvider);
+exports.getStaticRpcProvider = createProviderGetter(providers_1.StaticJsonRpcProvider);
+exports.getStaticRpcBatchProvider = createProviderGetter(staticJsonRpcBatchProvider_1.StaticJsonRpcBatchProvider);
