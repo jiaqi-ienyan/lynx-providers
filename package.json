@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/jiaqi-ienyan/lynx-providers",
   "repository": {
@@ -19,13 +20,32 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "scripts": {
+    "build": "rollup -c"
+  },
   "devDependencies": {
+    "@babel/cli": "7.19.3",
+    "@babel/core": "7.20.5",
+    "@babel/plugin-proposal-class-properties": "7.18.6",
+    "@babel/plugin-proposal-private-methods": "7.18.6",
+    "@babel/plugin-proposal-private-property-in-object": "7.20.5",
+    "@babel/preset-env": "7.20.2",
+    "@babel/preset-react": "7.18.6",
+    "@babel/preset-typescript": "7.18.6",
     "@ethersproject/logger": "^5.4.0",
     "@ethersproject/networks": "^5.4.0",
     "@ethersproject/properties": "^5.4.0",
     "@ethersproject/providers": "^5.4.5",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/jest": "^27.0.2",
-    "@types/node": "^20.10.4"
+    "@types/node": "^20.10.4",
+    "rollup": "^4.9.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-svg-import": "^2.1.0",
+    "rollup-plugin-typescript2": "^0.36.0"
   },
   "dependencies": {
     "@lido-sdk/constants": "git+https://github.com/jiaqi-ienyan/lynx-constants.git",
